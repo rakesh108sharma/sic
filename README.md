@@ -1,3 +1,3 @@
 # sic
 
-ein (später) Versuch
+ein "später" Versuch
