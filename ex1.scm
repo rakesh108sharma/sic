@@ -38,4 +38,17 @@
 ;; ist b positiv wird a und b addiert
 ;; ist b negativ oder 0 wird das Vorzeichen von b negiert (also positiv .. und a und b werden addiert
 
-;;;
+;;; ex 1.5
+;; welches Verhalten zeigen Interpreter, die
+;; - in der applikativen Reihenfolge auswerten?
+;; - in der normalen Reihenfolge auswerten?
+(define (p) (p))
+(define (test x y)
+  (if (= x 0)
+      0
+      y))
+(test 0 (p))
+;; Ich vermute, daß ein Interpreter, der in der applikativen Reihenfolge auswertet .. sich aufhängt, da die Funktion sich endlos weiter aufruft.
+;; Ein Interpreter, der in der normalen Reihenfolge auswertet, wird nach der Feststellung, daß x=0 ist, die Funktion "erfolgreich" mit 0 verlassen
+
+;;; ex 
